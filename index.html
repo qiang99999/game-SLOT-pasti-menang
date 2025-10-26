@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Qiang99 Slot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Qiang99 Slot</h1>
+      <p class="muted">Demo site — tidak menerima uang asli. Untuk testing saja.</p>
+    </header>
+
+    <section class="wallet card">
+      <h2>Wallet</h2>
+      <div class="balance">Balance: <span id="balance">100</span> coins</div>
+      <div class="estimate">Estimasi Rp: <span id="estimate">10</span></div>
+    </section>
+
+    <section class="game card">
+      <h2>Game</h2>
+      <div class="controls">
+        <button id="clickCoinBtn" class="btn">Click to get +1 coin</button>
+        <button id="spinBtn" class="btn primary">Spin (cost 10 coins)</button>
+      </div>
+      <div id="spinResult" class="result"></div>
+    </section>
+
+    <section class="ref card">
+      <h2>Referral</h2>
+      <div>
+        <input id="refCode" readonly value="Qiang99-{{CODE}}" />
+        <button id="copyRef" class="btn">Copy Referral</button>
+        <p class="muted">Share this code with friends to get rewards (demo).</p>
+      </div>
+    </section>
+
+    <section class="payout card">
+      <h2>Payout (Demo)</h2>
+      <form id="payoutForm">
+        <input name="bank" id="bank" placeholder="Nama Bank" />
+        <input name="accountName" id="accountName" placeholder="Nama Pemilik Rekening" />
+        <input name="accountNumber" id="accountNumber" placeholder="Nomor Rekening (digits only)" />
+        <input name="amount" id="amount" placeholder="Jumlah coin untuk cairkan" />
+        <div class="row">
+          <small class="muted">Ini hanya demo. Jangan masukkan data rekening asli di environment demo.</small>
+          <button class="btn" type="submit">Ajukan Pencairan</button>
+        </div>
+      </form>
+      <div id="payoutMessage" class="result"></div>
+    </section>
+
+    <footer class="muted">Made for testing. Upload to GitHub Pages to make it public.</footer>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
